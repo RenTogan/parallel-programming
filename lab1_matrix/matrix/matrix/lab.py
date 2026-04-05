@@ -55,7 +55,6 @@ def main():
     executable = "matrix_mult.exe" if os.name == 'nt' else "./matrix_mult"
     if not os.path.exists(executable):
         print("Ошибка: файл", executable, "не найден")
-        print("Скомпилируйте: g++ -std=c++11 -O2 matrix_mult.cpp -o matrix_mult")
         sys.exit(1)
 
     sizes = [100, 200, 300, 400, 500, 700, 1000]
@@ -116,7 +115,6 @@ def main():
         plt.grid(True)
         plt.savefig("time_plot.png")
         plt.show()
-        print("\nГрафик сохранён в time_plot.png")
 
 if __name__ == "__main__":
     main()
